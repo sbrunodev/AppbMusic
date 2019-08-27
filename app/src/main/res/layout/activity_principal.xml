@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    android:orientation="vertical"
+    tools:context="dev.sbruno.appbmusic.PrincipalActivity">
+
+
+    <TabHost
+        android:id="@+id/TabPrincipal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/tab1Principal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:orientation="vertical"  >
+
+                    <ListView
+                        android:id="@+id/ListV"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/background_light" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab2Principal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/ttbPesquisarDiscografia"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="Pesquisar por Cantor/Banda"
+                        android:inputType="textPersonName"
+                        android:textColor="@android:color/background_dark" />
+
+
+                    <Button
+                        android:id="@+id/btnPesquisarDiscografia"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Pesquisar" />
+
+                    <ListView
+                        android:id="@+id/ListDiscografia"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/background_light" />
+
+
+                </LinearLayout>
+
+
+
+
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+
+</LinearLayout>
+
